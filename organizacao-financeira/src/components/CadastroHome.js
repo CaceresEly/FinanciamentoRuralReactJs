@@ -1,13 +1,14 @@
 // src/components/CadastroHome.js
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './styles/CadastroHome.css'; // CSS para estilizar os botões
+import './styles/CadastroHome.css';
 
 function CadastroHome() {
   return (
     <div className="cadastro-home-container">
-      <h1>Cadastros Iniciais</h1>
-      <p>Selecione o item que deseja cadastrar:</p>
+      <h2 className="cadastro-home-subtitle">
+        Selecione o item que deseja cadastrar:
+      </h2>
 
       <div className="cadastro-grid">
         <Link to="/cadastro/metas" className="cadastro-button">

@@ -1,41 +1,54 @@
-/* src/components/CadastroHome.css */
+/* src/components/styles/CadastroHome.css */
+
 .cadastro-home-container {
-    text-align: center;
-    margin: 40px auto;
-    max-width: 800px;
-    font-family: Arial, sans-serif;
-  }
-  
-  .cadastro-home-container h1 {
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  .cadastro-home-container p {
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  /* Grid de botões */
-  .cadastro-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-  }
-  
-  /* Botão "moderno" */
-  .cadastro-button {
-    background-color: #4CAF50;
-    color: #fff;
-    text-decoration: none;
-    padding: 16px;
-    border-radius: 8px;
-    text-align: center;
-    font-weight: bold;
-    transition: background-color 0.3s;
-  }
-  
-  .cadastro-button:hover {
-    background-color: #45a049;
-  }
-  
+  margin: 40px auto;
+  /* Reduzimos a largura máxima para deixar cada coluna menor */
+  max-width: 450px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.cadastro-home-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Grade de 3 colunas, gap de 1px */
+.cadastro-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+
+/* Botões quadrados menores */
+.cadastro-button {
+  border-radius: 0;            /* Sem cantos arredondados */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;         /* Mantém formato quadrado */
+  min-height: 40px;            /* Quadrado menor */
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Cores diferentes para cada quadrado */
+.cadastro-grid a:nth-of-type(1) { background-color: #4CAF50; } /* verde */
+.cadastro-grid a:nth-of-type(2) { background-color: #2196F3; } /* azul */
+.cadastro-grid a:nth-of-type(3) { background-color: #FFC107; } /* amarelo */
+.cadastro-grid a:nth-of-type(4) { background-color: #FF5722; } /* laranja */
+.cadastro-grid a:nth-of-type(5) { background-color: #9C27B0; } /* roxo */
+.cadastro-grid a:nth-of-type(6) { background-color: #F44336; } /* vermelho */
+.cadastro-grid a:nth-of-type(7) { background-color: #E91E63; } /* pink */
+.cadastro-grid a:nth-of-type(8) { background-color: #3F51B5; } /* índigo */
+.cadastro-grid a:nth-of-type(9) { background-color: #00BCD4; } /* ciano */
+
+/* Efeito de hover */
+.cadastro-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}

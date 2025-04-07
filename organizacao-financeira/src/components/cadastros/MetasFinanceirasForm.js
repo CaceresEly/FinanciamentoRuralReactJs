@@ -1,51 +1,51 @@
 // src/components/cadastros/MetasFinanceirasForm.js
 import React, { useState } from 'react';
+import '../styles/cadastrosStyles.css';
 
 function MetasFinanceirasForm() {
-  const [nomeMeta, setNomeMeta] = useState('');
-  const [valorDesejado, setValorDesejado] = useState('');
+  const [titulo, setTitulo] = useState('');
+  const [valorAlvo, setValorAlvo] = useState('');
   const [dataAlvo, setDataAlvo] = useState('');
   const [descricao, setDescricao] = useState('');
+  const [status, setStatus] = useState('pendente');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você poderia salvar no Firebase ou outro backend
-    const meta = {
-      nomeMeta,
-      valorDesejado: parseFloat(valorDesejado),
+    const metaData = {
+      titulo,
+      valorAlvo: parseFloat(valorAlvo),
       dataAlvo,
-      descricao
+      descricao,
+      status,
     };
-    console.log('Cadastrando meta financeira:', meta);
-    // Limpar campos ou redirecionar após salvar
+    console.log("Meta financeira cadastrada:", metaData);
   };
 
   return (
-    <div style={{ maxWidth: '500px', margin: '40px auto' }}>
-      <h2>Cadastro de Metas Financeiras</h2>
+    <div className="form-container green-background">
+      <h2 className="form-title">Cadastro de Metas Financeiras</h2>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Nome da Meta:</label>
+        <div className="form-group">
+          <label>Título da Meta:</label>
           <input
             type="text"
-            value={nomeMeta}
-            onChange={(e) => setNomeMeta(e.target.value)}
+            value={titulo}
+            onChange={(e) => setTitulo(e.target.value)}
+            placeholder="Ex: Aumentar produção de soja"
             required
           />
         </div>
-
-        <div>
-          <label>Valor Desejado (R$):</label>
+        <div className="form-group">
+          <label>Valor Alvo (R$):</label>
           <input
             type="number"
             step="0.01"
-            value={valorDesejado}
-            onChange={(e) => setValorDesejado(e.target.value)}
+            value={valorAlvo}
+            onChange={(e) => setValorAlvo(e.target.value)}
             required
           />
         </div>
-
-        <div>
+        <div className="form-group">
           <label>Data Alvo:</label>
           <input
             type="date"
@@ -54,16 +54,22 @@ function MetasFinanceirasForm() {
             required
           />
         </div>
-
-        <div>
+        <div className="form-group">
           <label>Descrição/Observações:</label>
           <textarea
             value={descricao}
             onChange={(e) => setDescricao(e.target.value)}
+            placeholder="Detalhes da meta..."
           />
         </div>
-
-        <button type="submit">Salvar</button>
+        <div className="form-group">
+          <label>Status:</label>
+          <select value={status} onChange={(e) => setStatus(e.target.value)} required>
+            <option value="pendente">Pendente</option>
+            <option value="alcançada">Alcançada</option>
+          </select>
+        </div>
+        <button type="submit" className="submit-button">Salvar</button>
       </form>
     </div>
   );
