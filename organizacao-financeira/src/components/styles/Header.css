@@ -1,0 +1,65 @@
+/* src/components/Header.css */
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .header-logo {
+    flex: 0 0 auto;
+  }
+  
+  .logo-link {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #4CAF50; /* Verde */
+  }
+  
+  .header-search {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-search input {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .header-actions {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .header-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+  }
+  
+  .header-button:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .header-hamburger {
+    font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
+    color: #333;
+  }
+  

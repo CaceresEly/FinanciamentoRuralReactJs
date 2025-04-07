@@ -1,0 +1,41 @@
+/* src/components/CadastroHome.css */
+.cadastro-home-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .cadastro-home-container h1 {
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .cadastro-home-container p {
+    color: #555;
+    margin-bottom: 30px;
+  }
+  
+  /* Grid de botões */
+  .cadastro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Botão "moderno" */
+  .cadastro-button {
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .cadastro-button:hover {
+    background-color: #45a049;
+  }
+  

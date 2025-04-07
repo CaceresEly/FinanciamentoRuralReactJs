@@ -1,0 +1,99 @@
+/* src/components/styles/Signup.css */
+
+.signup-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Lado esquerdo: card de cadastro */
+.signup-left {
+  flex: 1; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* cinza claro, igual ao login */
+}
+
+.signup-box {
+  background-color: #fff;
+  width: 80%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.signup-box h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.signup-error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+/* Formulário */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botão de cadastrar */
+.signup-form button {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px;
+  background-color: #4CAF50; /* verde */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signup-form button:hover {
+  background-color: #45a049;
+}
+
+/* Lado direito: verde */
+.signup-right {
+  flex: 1; 
+  background-color: #4CAF50; 
+}
+
+.signup-success {
+  color: green;
+  margin-bottom: 10px;
+  font-weight: bold;
+}

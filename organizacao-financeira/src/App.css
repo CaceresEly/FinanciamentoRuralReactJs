@@ -1,0 +1,15 @@
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+input, select {
+  padding: 5px;
+  margin-left: 10px;
+}

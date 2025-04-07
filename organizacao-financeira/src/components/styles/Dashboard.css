@@ -1,0 +1,36 @@
+/* src/components/Dashboard.css */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header no topo */
+.header {
+  flex-shrink: 0;
+}
+
+/* Conteúdo principal fica abaixo do header */
+.dashboard-content {
+  flex: 1;
+  background-color: #f5f5f5;
+  padding: 20px;
+  overflow-y: auto; /* rolagem vertical se o conteúdo for grande */
+  margin-left: 200px; /* espaço para a sidebar fixa */
+  transition: margin-left 0.3s ease;
+}
+
+.section-placeholder {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 1.2rem;
+}
+
+.section-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Se a sidebar for “over” o conteúdo em telas menores, você pode manipular margin-left no JS/CSS */
